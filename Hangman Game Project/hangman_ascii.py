@@ -73,16 +73,3 @@ HANGMAN_PICS = [
     --------
     """
 ]
-
-import time
-
-guess = 0
-for hangman in HANGMAN_PICS:
-    print(f"Guess {guess}")
-    print(hangman)
-    guess += 1
-    time.sleep(1)
-
-print("Game over")
-
-print(f"The user starts at 0 guesses and has {len(HANGMAN_PICS) - 1} wrong guesses before losing")
