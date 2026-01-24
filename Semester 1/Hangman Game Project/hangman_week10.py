@@ -106,6 +106,9 @@ while wrong_guesses < MAX_WRONG_GUESSES:
     if not guessed_letter.isalpha():
         print("Your guess needs to be a letter")
         continue  
+    if guessed_letter in guessed_letters:
+        print("You have already guessed this letter")
+        continue
 
     guessed_letters.append(guessed_letter)
 
@@ -116,13 +119,30 @@ while wrong_guesses < MAX_WRONG_GUESSES:
         wrong_letters.append(guessed_letter)
         wrong_guesses += 1
     display = ""
+    match_count = 0  # Win con 3
     for letter in secret_word:
         if letter in guessed_letters:
             display = display + f"{letter} "
+            match_count += 1 # Win con 3
         else:   
             display = display + "_ "
 
-    # Add win condition here
+    # Add win condition here: Win con 3
+    if match_count >= len(secret_word):
+        print("\n" + "=" * 40)
+        print("🎉 CONGRATULATIONS! YOU WON! 🎉")
+        print(f"The word was: {secret_word.upper()}")
+        print(f"Wrong guesses: {wrong_guesses}/{MAX_WRONG_GUESSES}")
+        print("=" * 40)
+        break
     
     print(display)
+
+# Loss condition
+if wrong_guesses >= MAX_WRONG_GUESSES:
+    print(HANGMAN_PICS[wrong_guesses])
+    print("=" * 40)
+    print("GAME OVER! You ran out of guesses!")
+    print(f"The word was: {secret_word.upper()}")
+    print("=" * 40)
     

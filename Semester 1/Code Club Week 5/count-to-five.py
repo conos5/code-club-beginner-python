@@ -1,7 +1,10 @@
+import time
+
 count = 1
 
 while count <= 5:
     print(f"Count is: {count}")
     count = count + 1
-    
+    time.sleep(1)
+
 print("Done counting!")
