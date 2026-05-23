@@ -10,5 +10,5 @@ https://arcade.makecode.com/S01724-22527-92439-63280
 **Donnacha (dragapult):** robot spaceship adventure
 https://makecode.com/_Ew0iJce7CXvp
 
-**Submit new games at: **
+**Submit new games at:**
 https://docs.google.com/forms/d/1dzIqgfNsdytCO34_hI6lAlOs8YNqvVCf_Va8z-twZ8U/edit#responses
